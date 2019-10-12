@@ -86,13 +86,16 @@ void initiatePayment(int p) //rider id
     {
         for (int i = 0; i < k; i++)
         {
+            pthread_mutex_lock(&paymentserverstatus_mutex[i]);
             if (PaymentServerStatus[i] == -1)
             {
                 printf("Rider %d has initiated Payment on Server %d.\n", p, i);
                 PaymentServerStatus[i] = p;
                 paymentDone = 1;
+                pthread_mutex_unlock(&paymentserverstatus_mutex[i]);
                 return;
             }
+            pthread_mutex_unlock(&paymentserverstatus_mutex[i]);
         }
     }
 }
