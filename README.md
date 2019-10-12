@@ -27,7 +27,15 @@
 	> Normal:
 	  gcc 1c.c - o 1c.out
 	  ./1c.out
-	  
+
+- Automatic Biryani Serving:
+	Problem:
+	> Simulate an automate biryani serving machine to automate the entire pipeline of serving Biryani.
+	
+	How To Run:
+	> gcc 2.c -pthread -o 2.out
+		./2.out
+
 - Ober Cab Services:
 	Problem:
 	> Simulate a Ober Cab Service which accepts three inputs (N cabs, M riders and K Payment Server). Ober provides two types of cab service namely pool and premier ride. A rider can chose among the two. Riders completes the ride and then payment to be made. If there are no Payment server remaining then rider waits until a payment server is free.
